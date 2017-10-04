@@ -27,18 +27,43 @@ nav {
     margin-top: 30px;
 }
 
+/*
 nav ul {
     float: right;
     list-style: none;
+    width: 100%;
+    text-align: right;
 }
+*/
 
-nav ul li {
+nav a {
     display: inline-flex;
     padding: 10px 20px;;
 }
 
-li:last-of-type {
+nav a:last-of-type {
     background-color: rgb(33, 39, 51);
     color: rgb(214, 215, 216);
 }
+
+
+/*-------------------------------
+TITLE
+--------------------------------*/
+
+.title {
+    position: relative;
+    display: block;
+    margin-top: 100px;
+}
+
+h1 {
+    font-weight: 100;
+    font-size: 300%;
+}
+
+
+
+
+
 
