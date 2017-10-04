@@ -11,19 +11,18 @@ module.exports = {
     filename: 'bundle.js',
   },
   module: {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: [
-          'babel-loader',
-        ],
-      },
-    ],
-  },
-  resolve: {
-    modules: [
-      path.join(__dirname, 'node_modules'),
-    ],
+    loaders: [
+        {
+            test: /\.js$/,
+            exclude: /node_modules/,
+            loader: 'babel-loader',
+            include: path.join(__dirname, 'src')
+        },
+        {
+            test: /\.s?css$/,
+            loader: 'style-loader!css-loader!sass-loader',
+            include: path.join(__dirname, 'style')
+        },
+    ]
   },
 };
