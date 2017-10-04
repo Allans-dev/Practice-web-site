@@ -1,0 +1,44 @@
+/*-------------------------------
+GLOBAL
+--------------------------------*/
+
+body {
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/*-------------------------------
+NAV BAR
+--------------------------------*/
+
+nav {
+    margin-top: 30px;
+}
+
+nav ul {
+    float: right;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-flex;
+    padding: 10px 20px;;
+}
+
+li:last-of-type {
+    background-color: rgb(33, 39, 51);
+    color: rgb(214, 215, 216);
+}
+
