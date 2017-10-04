@@ -25,11 +25,14 @@ NAV BAR
 
 nav {
     margin-top: 30px;
+    display: block;
 }
 
 nav ul {
     float: right;
     list-style: none;
+    width: 100%;
+    text-align: right;
 }
 
 nav ul li {
@@ -37,8 +40,22 @@ nav ul li {
     padding: 10px 20px;;
 }
 
-li:last-of-type {
+nav ul li:last-of-type {
     background-color: rgb(33, 39, 51);
     color: rgb(214, 215, 216);
 }
 
+/*-------------------------------
+TITLE
+--------------------------------*/
+
+.title {
+    position: relative;
+    display: block;
+}
+
+h1 {
+    padding-top: 200px;
+    font-weight: 100;
+    font-size: 300%;
+}
