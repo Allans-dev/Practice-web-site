@@ -5,13 +5,13 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const extractSass = new ExtractTextPlugin({
     filename: "main.dbbff672133da5c16a9769c856971a21.css",
-    disable: process.env.NODE_ENV === "development"
+    allChunks: true
 });
 
 module.exports = {
     context: path.join(__dirname, 'src'),
     entry: [
-        './main.js',
+        './main.js'
     ],
     output: {
         path: path.join(__dirname),

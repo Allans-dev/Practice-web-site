@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { AppContainer } from 'react-hot-loader';
 
 import Navbar from './navbar';
 import Title from './title';
