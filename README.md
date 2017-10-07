@@ -14,7 +14,9 @@ Difficulties faced include:
  - react hot-loader with devMiddleware express server
 
   
-refactor into new branch removing react - keeping it simple with crux in mind  
+refactor into new branch removing react - keeping it simple with crux in mind
+
+moving from installing sass with npm to ruby install
   
    
      

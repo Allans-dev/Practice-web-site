@@ -1,4 +1,5 @@
 @import "neat";
+@import "variables";
 
 /*-------------------------------
 GLOBAL
@@ -6,7 +7,7 @@ GLOBAL
 
 body {
     font-size: 16px;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Work Sans', sans-serif;
     font-weight: 300;
 }
 
@@ -34,6 +35,7 @@ nav {
         width: 100%;
         padding: 0;
         text-align: right;
+        @include grid-column(7, $nav-grid);
         
         li {
             display: inline-flex;
@@ -53,22 +55,44 @@ TITLE
 --------------------------------*/
 
 .title {
-    margin-left: 30px;
     position: relative;
     display: block;
+    padding-top: 180px;
     
     h1 {
-        padding-top: 200px;
         font-weight: 200;
-        font-size: 340%;
+        font-size: 345%;
         margin-bottom: 20px;
         letter-spacing: 1px;
+        @include grid-column(7, $title-grid);
     }
     
     span {
         font-weight: 400;
-        font-size: 140%;
+        font-size: 125%;
         color: rgb(112,112,113);
+        font-weight: 300;
+        letter-spacing: 1px;
+        font-family: 'Libre Franklin', sans-serif;
+        @include grid-column(7, $title-grid);
+
+    }
+    
+    ul {
+        position: relative;
+        float: right;
+        padding: 0;
+        @include grid-column(7, $title-grid);
+        text-align: right;
+
+        
+        li {
+            list-style: none;
+            display: inline-flex;
+            border: 1px solid black;
+            padding: 7px;
+            border-radius: 50%;
+        }
     }
 }
 
