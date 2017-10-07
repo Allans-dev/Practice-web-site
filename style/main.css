@@ -1,9 +1,3 @@
-html {
-  box-sizing: border-box; }
-
-*, *::after, *::before {
-  box-sizing: inherit; }
-
 /*-------------------------------
 GLOBAL
 --------------------------------*/
@@ -56,3 +50,5 @@ TITLE
     font-weight: 400;
     font-size: 140%;
     color: #707071; }
+
+/*# sourceMappingURL=main.css.map */
