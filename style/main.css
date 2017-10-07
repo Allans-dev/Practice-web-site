@@ -133,27 +133,31 @@ BACKGROUND
 .logo {
   position: absolute;
   right: 0;
-  z-index: -100; }
+  top: 220px;
+  z-index: -200;
+  width: 650px;
+  height: auto; }
 
 .slope {
-  position: absolute;
-  left: -5px;
-  top: -120px;
-  z-index: 100; }
+  position: relative;
+  z-index: -100;
+  width: 110%;
+  margin: 30px 0 -5px -10px; }
 
 .services-background {
   position: relative;
-  margin-top: 600px;
   background-color: #0b4e70;
   height: 340px;
-  width: 100%;
-  z-index: -100; }
+  width: 110%;
+  z-index: -100;
+  left: -5%; }
 
 .footer {
   position: relative;
   background-color: #212934;
   height: 30px;
-  width: 100%;
+  width: 110%;
+  left: -5%;
   margin-bottom: 120px; }
 
 /*# sourceMappingURL=main.css.map */
