@@ -63,17 +63,54 @@ TITLE
     margin-left: 0px; }
   .title ul {
     position: relative;
-    float: right;
-    padding: 0;
-    width: calc(58.3333333333%);
+    text-align: right;
+    left: -50px;
+    margin-top: 70px;
+    width: calc(58.3333333333% - 31.6666666667px);
     float: left;
-    margin-left: 0px;
-    text-align: right; }
+    margin-left: 20px; }
     .title ul li {
       list-style: none;
       display: inline-flex;
-      border: 1px solid black;
-      padding: 7px;
+      background-color: #cecece;
+      padding: 8px;
       border-radius: 50%; }
+    .title ul li:first-of-type {
+      background-color: #0b4e70; }
+
+/*-------------------------------
+SERVICES
+--------------------------------*/
+.services {
+  margin-top: 200px;
+  width: calc(100%);
+  float: left;
+  margin-left: 0px; }
+  .services div {
+    font-size: 94%; }
+    .services div a {
+      color: #75c372;
+      text-decoration: underline; }
+  .services .consult {
+    text-align: center;
+    left: calc(8.3333333333% + 0px);
+    position: relative;
+    width: calc(16.6666666667%);
+    float: left;
+    margin-left: 0px; }
+  .services .implement {
+    text-align: center;
+    left: calc(25% + 0px);
+    position: relative;
+    width: calc(16.6666666667%);
+    float: left;
+    margin-left: 0px; }
+  .services .manage {
+    text-align: center;
+    left: calc(41.6666666667% + 0px);
+    position: relative;
+    width: calc(16.6666666667%);
+    float: left;
+    margin-left: 0px; }
 
 /*# sourceMappingURL=main.css.map */

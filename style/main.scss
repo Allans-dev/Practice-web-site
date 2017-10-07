@@ -80,19 +80,55 @@ TITLE
     
     ul {
         position: relative;
-        float: right;
-        padding: 0;
-        @include grid-column(7, $title-grid);
         text-align: right;
-
-        
+        left: -50px;
+        margin-top: 70px;
+        @include grid-column(7);
+          
         li {
             list-style: none;
             display: inline-flex;
-            border: 1px solid black;
-            padding: 7px;
+            background-color: rgb(206,206,206);
+            padding: 8px;
             border-radius: 50%;
         }
+        
+        li:first-of-type { background-color: rgb(11,78,112); }
+        
+    }
+}
+
+/*-------------------------------
+SERVICES
+--------------------------------*/
+
+.services {
+    margin-top: 200px;
+    @include grid-column(12, $services-grid);
+    
+    div {
+        font-size: 94%;
+        
+        a {
+            color: rgb(117, 195, 114);
+            text-decoration: underline;
+        }
+    }
+
+    .consult {
+        text-align: center;
+        @include grid-shift(1, $services-grid);
+        @include grid-column(2, $services-grid);
+    }
+    .implement {
+        text-align: center;
+        @include grid-shift(3, $services-grid);
+        @include grid-column(2, $services-grid);
+    }
+    .manage {
+        text-align: center;
+        @include grid-shift(5, $services-grid);
+        @include grid-column(2, $services-grid);
     }
 }
 
