@@ -11,6 +11,12 @@ body {
   font-size: 16px;
   font-family: 'Libre Franklin', sans-serif;
   font-weight: 300; }
+  @media only screen and (max-width: 1024px) {
+    body {
+      font-size: 13px; } }
+  @media only screen and (max-width: 480px) {
+    body {
+      font-size: 10px; } }
 
 a {
   text-decoration: none;
@@ -27,19 +33,26 @@ NAV BAR
 --------------------------------*/
 nav {
   margin-top: 30px; }
+  @media only screen and (max-width: 480px) {
+    nav {
+      margin-top: 10px; } }
   nav ul {
     float: right;
     list-style: none;
     width: 100%;
     padding: 0;
     text-align: right;
-    width: calc(66.6666666667%);
+    width: calc(100%);
     float: right;
     margin-right: 0px; }
     nav ul li {
       display: inline-flex;
       padding: 10px 19px;
       font-weight: 200; }
+      @media only screen and (max-width: 480px) {
+        nav ul li {
+          font-size: 85%;
+          padding: 5px 8px; } }
     nav ul li:last-of-type {
       background-color: #212733;
       color: #d6d7d8; }
@@ -51,24 +64,39 @@ TITLE
   position: relative;
   display: block;
   padding-top: 180px; }
+  @media only screen and (max-width: 1024px) {
+    .title {
+      padding-top: 100px; } }
+  @media only screen and (max-width: 768px) {
+    .title {
+      padding-left: 10px; } }
+  @media only screen and (max-width: 480px) {
+    .title {
+      padding-top: 40px; } }
   .title h1 {
     font-family: 'Work Sans', sans-serif;
     font-weight: 200;
     font-size: 345%;
     margin-bottom: 20px;
-    letter-spacing: 1px;
-    width: calc(58.3333333333%);
-    float: left;
-    margin-left: 0px; }
+    letter-spacing: 1px; }
+    @media only screen and (max-width: 1024px) {
+      .title h1 {
+        margin-bottom: 10px; } }
+    @media only screen and (max-width: 768px) {
+      .title h1 {
+        font-size: 280%; } }
   .title span {
     font-weight: 400;
     font-size: 125%;
     color: #707071;
     font-weight: 300;
     letter-spacing: 1px;
-    width: calc(58.3333333333%);
+    width: calc(100%);
     float: left;
     margin-left: 0px; }
+    @media only screen and (max-width: 768px) {
+      .title span {
+        font-size: 100%; } }
   .title ul {
     position: relative;
     text-align: right;
@@ -77,12 +105,23 @@ TITLE
     width: calc(58.3333333333% - 31.6666666667px);
     float: left;
     margin-left: 20px; }
+    @media only screen and (max-width: 1024px) {
+      .title ul {
+        margin-top: 20px; } }
+    @media only screen and (max-width: 480px) {
+      .title ul {
+        width: calc(75% - 35px);
+        float: left;
+        margin-left: 20px; } }
     .title ul li {
       list-style: none;
       display: inline-flex;
       background-color: #cecece;
       padding: 7px;
       border-radius: 50%; }
+      @media only screen and (max-width: 768px) {
+        .title ul li {
+          padding: 5px; } }
     .title ul li:first-of-type {
       background-color: #0b4e70; }
 
@@ -113,6 +152,10 @@ SERVICES
     width: calc(16.6666666667%);
     float: left;
     margin-left: 0px; }
+    @media only screen and (max-width: 1024px) {
+      .services .consult {
+        left: calc(16.6666666667% + 0px);
+        position: relative; } }
   .services .implement {
     text-align: center;
     left: calc(25% + 0px);
@@ -127,17 +170,33 @@ SERVICES
     width: calc(16.6666666667%);
     float: left;
     margin-left: 0px; }
+    @media only screen and (max-width: 1024px) {
+      .services .manage {
+        left: calc(33.3333333333% + 0px);
+        position: relative; } }
 
 /*-------------------------------
 BACKGROUND
 --------------------------------*/
 .logo {
   position: absolute;
-  right: 0;
+  right: -15px;
   top: 220px;
   z-index: -200;
   width: 650px;
   height: auto; }
+  @media only screen and (max-width: 1024px) {
+    .logo {
+      width: 500px;
+      top: 140px; } }
+  @media only screen and (max-width: 768px) {
+    .logo {
+      width: 250px;
+      top: 250px; } }
+  @media only screen and (max-width: 480px) {
+    .logo {
+      top: 180px;
+      width: 160px; } }
 
 .slope {
   position: relative;
@@ -152,6 +211,12 @@ BACKGROUND
   width: 110%;
   z-index: -100;
   left: -5%; }
+  @media only screen and (max-width: 1024px) {
+    .services-background {
+      height: 280px; } }
+  @media only screen and (max-width: 480px) {
+    .services-background {
+      height: 230px; } }
 
 .footer {
   position: relative;
@@ -159,6 +224,6 @@ BACKGROUND
   height: 30px;
   width: 110%;
   left: -5%;
-  margin-bottom: 120px; }
+  margin-bottom: 80px; }
 
 /*# sourceMappingURL=main.css.map */

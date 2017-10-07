@@ -1,5 +1,6 @@
 @import "neat";
 @import "variables";
+@import "mixins";
 
 /*-------------------------------
 GLOBAL
@@ -9,6 +10,15 @@ body {
     font-size: 16px;
     font-family: 'Libre Franklin', sans-serif;
     font-weight: 300;
+    
+    @include tablet-landscape-and-below {
+        font-size: 13px;
+    }
+    
+    @include mobile-landscape-and-below {
+        font-size: 10px;
+    }
+    
 }
 
 a {
@@ -30,18 +40,27 @@ NAV BAR
 nav {
     margin-top: 30px;
     
+    @include mobile-landscape-and-below {
+        margin-top: 10px;
+    }
+    
     ul {
         float: right;
         list-style: none;
         width: 100%;
         padding: 0;
         text-align: right;
-        @include grid-column(8, $nav-grid);
+        @include grid-column(12, $nav-grid);
         
         li {
             display: inline-flex;
             padding: 10px 19px;
             font-weight: 200;
+            
+            @include mobile-landscape-and-below {
+                font-size: 85%;
+                padding: 5px 8px;
+            }
         }
         
         li:last-of-type {
@@ -61,13 +80,33 @@ TITLE
     display: block;
     padding-top: 180px;
     
+    @include tablet-landscape-and-below {
+        padding-top: 100px;
+    }
+    
+    @include tablet-portrait-and-below {
+        padding-left: 10px;
+    }
+    
+    @include mobile-landscape-and-below {
+        padding-top: 40px;
+    }
+    
     h1 {
         font-family: 'Work Sans', sans-serif;
         font-weight: 200;
         font-size: 345%;
         margin-bottom: 20px;
         letter-spacing: 1px;
-        @include grid-column(7, $title-grid);
+        
+        @include tablet-landscape-and-below {
+            margin-bottom: 10px;
+        }
+        
+        @include tablet-portrait-and-below {
+            font-size: 280%;
+        }
+        
     }
     
     span {
@@ -76,7 +115,11 @@ TITLE
         color: rgb(112,112,113);
         font-weight: 300;
         letter-spacing: 1px;
-        @include grid-column(7, $title-grid);
+        @include grid-column(12, $title-grid);
+        
+        @include tablet-portrait-and-below {
+            font-size: 100%;
+        }
 
     }
     
@@ -86,13 +129,25 @@ TITLE
         left: -50px;
         margin-top: 50px;
         @include grid-column(7);
+        
+        @include tablet-landscape-and-below {
+            margin-top: 20px;   
+        }
           
+        @include mobile-landscape-and-below {
+            @include grid-column(9);
+        }
+        
         li {
             list-style: none;
             display: inline-flex;
             background-color: rgb(206,206,206);
             padding: 7px;
             border-radius: 50%;
+            
+            @include tablet-portrait-and-below {
+                padding: 5px;
+            }
         }
         
         li:first-of-type { background-color: $blue; }
@@ -128,16 +183,27 @@ SERVICES
         text-align: center;
         @include grid-shift(1, $services-grid);
         @include grid-column(2, $services-grid);
+        
+        @include tablet-landscape-and-below {
+           @include grid-shift(2, $services-grid);   
+        }
+        
     }
     .implement {
         text-align: center;
         @include grid-shift(3, $services-grid);
         @include grid-column(2, $services-grid);
+        
     }
     .manage {
         text-align: center;
         @include grid-shift(5, $services-grid);
         @include grid-column(2, $services-grid);
+        
+        @include tablet-landscape-and-below {
+           @include grid-shift(4, $services-grid);  
+        }
+        
     }
 }
 
@@ -147,11 +213,26 @@ BACKGROUND
 
 .logo {
     position: absolute;
-    right: 0;
+    right: -15px;
     top: 220px;
     z-index: -200;
     width: 650px;
     height: auto;
+    
+    @include tablet-landscape-and-below {
+        width: 500px;
+        top: 140px;
+    }
+    
+    @include tablet-portrait-and-below {
+        width: 250px;
+        top: 250px;
+    }
+    
+    @include mobile-landscape-and-below {
+        top: 180px;
+        width: 160px;
+    }
 }
 
 .slope {
@@ -168,6 +249,14 @@ BACKGROUND
     width: 110%;
     z-index: -100;
     left: -5%;
+    
+    @include tablet-landscape-and-below {
+        height: 280px;
+    }
+    
+    @include mobile-landscape-and-below {
+        height: 230px;
+    }
 }
 
 .footer {
@@ -176,7 +265,7 @@ BACKGROUND
     height: 30px;
     width: 110%;
     left: -5%;
-    margin-bottom: 120px;
+    margin-bottom: 80px;
 }
 
 
