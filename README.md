@@ -1,13 +1,14 @@
 Building website from wireframe  
 birdbrain junior developer application  
   
-Technologies learnt:  
+New Technologies learnt:  
 Sass  
 Bourbon Neat  
 
 Gaining Experience with:  
-Better understanding of webpack  
+Webpack  
 Photoshop  
+Illustrator
 
 Difficulties faced include:  
  - configuring webpack with sass and bourbon-neat  

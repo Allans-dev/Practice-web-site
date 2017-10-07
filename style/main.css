@@ -1,3 +1,9 @@
+/* ---------------
+COLOURS
+----------------*/
+/* ---------------
+GRID
+----------------*/
 /*-------------------------------
 GLOBAL
 --------------------------------*/
@@ -8,7 +14,8 @@ body {
 
 a {
   text-decoration: none;
-  color: inherit; }
+  color: inherit;
+  cursor: pointer; }
 
 .row {
   max-width: 1140px;
@@ -65,7 +72,7 @@ TITLE
     position: relative;
     text-align: right;
     left: -50px;
-    margin-top: 70px;
+    margin-top: 50px;
     width: calc(58.3333333333% - 31.6666666667px);
     float: left;
     margin-left: 20px; }
@@ -73,7 +80,7 @@ TITLE
       list-style: none;
       display: inline-flex;
       background-color: #cecece;
-      padding: 8px;
+      padding: 7px;
       border-radius: 50%; }
     .title ul li:first-of-type {
       background-color: #0b4e70; }
@@ -82,7 +89,10 @@ TITLE
 SERVICES
 --------------------------------*/
 .services {
-  margin-top: 200px;
+  position: relative;
+  z-index: 100;
+  color: white;
+  margin-top: 40px;
   width: calc(100%);
   float: left;
   margin-left: 0px; }
@@ -116,5 +126,34 @@ SERVICES
     width: calc(16.6666666667%);
     float: left;
     margin-left: 0px; }
+
+/*-------------------------------
+BACKGROUND
+--------------------------------*/
+.logo {
+  position: absolute;
+  right: 0;
+  z-index: -100; }
+
+.slope {
+  position: absolute;
+  left: -5px;
+  top: -120px;
+  z-index: 100; }
+
+.services-background {
+  position: relative;
+  margin-top: 600px;
+  background-color: #0b4e70;
+  height: 340px;
+  width: 100%;
+  z-index: -100; }
+
+.footer {
+  position: relative;
+  background-color: #212934;
+  height: 30px;
+  width: 100%;
+  margin-bottom: 120px; }
 
 /*# sourceMappingURL=main.css.map */

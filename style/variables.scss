@@ -1,5 +1,20 @@
 @import "neat";
 
+/* ---------------
+COLOURS
+----------------*/
+
+$blue: rgb(11,78,112);
+$darkBlue: rgb(33, 41, 52);
+$lightBlue: rgb(35, 145, 205);
+$green: rgb(117, 195, 114);
+
+
+
+/* ---------------
+GRID
+----------------*/
+
 $nav-grid: (
     columns: 12,
     gutter: 0px,
