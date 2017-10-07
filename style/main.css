@@ -88,6 +88,10 @@ SERVICES
   margin-left: 0px; }
   .services div {
     font-size: 94%; }
+    .services div .fa {
+      margin-bottom: 20px; }
+    .services div span {
+      font-size: 110%; }
     .services div a {
       color: #75c372;
       text-decoration: underline; }
