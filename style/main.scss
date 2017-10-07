@@ -7,7 +7,7 @@ GLOBAL
 
 body {
     font-size: 16px;
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Libre Franklin', sans-serif;
     font-weight: 300;
 }
 
@@ -36,11 +36,12 @@ nav {
         width: 100%;
         padding: 0;
         text-align: right;
-        @include grid-column(7, $nav-grid);
+        @include grid-column(8, $nav-grid);
         
         li {
             display: inline-flex;
-            padding: 10px 20px;
+            padding: 10px 19px;
+            font-weight: 200;
         }
         
         li:last-of-type {
@@ -61,6 +62,7 @@ TITLE
     padding-top: 180px;
     
     h1 {
+        font-family: 'Work Sans', sans-serif;
         font-weight: 200;
         font-size: 345%;
         margin-bottom: 20px;
@@ -74,7 +76,6 @@ TITLE
         color: rgb(112,112,113);
         font-weight: 300;
         letter-spacing: 1px;
-        font-family: 'Libre Franklin', sans-serif;
         @include grid-column(7, $title-grid);
 
     }
