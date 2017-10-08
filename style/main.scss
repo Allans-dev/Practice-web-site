@@ -1,4 +1,6 @@
 @import "neat";
+@import "variables";
+@import "mixins";
 
 /*-------------------------------
 GLOBAL
@@ -6,13 +8,24 @@ GLOBAL
 
 body {
     font-size: 16px;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Libre Franklin', sans-serif;
     font-weight: 300;
+    margin: 0;
+    
+    @include tablet-landscape-and-below {
+        font-size: 13px;
+    }
+    
+    @include mobile-landscape-and-below {
+        font-size: 10px;
+    }
+    
 }
 
 a {
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
 }
 
 .row {
@@ -28,16 +41,31 @@ NAV BAR
 nav {
     margin-top: 30px;
     
+    @include mobile-landscape-and-below {
+        margin-top: 10px;
+    }
+    
     ul {
         float: right;
         list-style: none;
         width: 100%;
         padding: 0;
         text-align: right;
+        @include grid-column(12, $nav-grid);
+        
+        @include mobile-landscape-and-below {
+            display: none;
+        }
         
         li {
             display: inline-flex;
-            padding: 10px 20px;
+            padding: 10px 19px;
+            font-weight: 200;
+            
+            @include mobile-landscape-and-below {
+                font-size: 85%;
+                padding: 5px 8px;
+            }
         }
         
         li:last-of-type {
@@ -53,23 +81,268 @@ TITLE
 --------------------------------*/
 
 .title {
-    margin-left: 30px;
     position: relative;
     display: block;
+    padding-top: 180px;
+    
+    @include tablet-landscape-and-below {
+        padding-top: 100px;
+        margin-left: 10px;
+    }
+    
+    @include tablet-portrait-and-below {
+        margin-left: 10px;
+    }
+    
+    @include mobile-landscape-and-below {
+        padding-top: 40px;
+    }
     
     h1 {
-        padding-top: 200px;
+        font-family: 'Work Sans', sans-serif;
         font-weight: 200;
-        font-size: 340%;
+        font-size: 345%;
         margin-bottom: 20px;
         letter-spacing: 1px;
+        
+        @include tablet-landscape-and-below {
+            margin-bottom: 10px;
+        }
+        
+        @include tablet-portrait-and-below {
+            font-size: 280%;
+        }
+        
     }
     
     span {
         font-weight: 400;
-        font-size: 140%;
+        font-size: 125%;
         color: rgb(112,112,113);
+        font-weight: 300;
+        letter-spacing: 1px;
+        @include grid-column(12, $title-grid);
+        
+        @include tablet-portrait-and-below {
+            font-size: 100%;
+        }
+
+    }
+    
+    ul {
+        position: relative;
+        text-align: right;
+        left: -50px;
+        margin-top: 50px;
+        @include grid-column(7);
+        
+        @include tablet-landscape-and-below {
+            margin-top: 20px;   
+        }
+          
+        @include mobile-landscape-and-below {
+            @include grid-column(9);
+        }
+        
+        li {
+            list-style: none;
+            display: inline-flex;
+            background-color: rgb(206,206,206);
+            padding: 7px;
+            border-radius: 50%;
+            
+            @include tablet-portrait-and-below {
+                padding: 5px;
+            }
+        }
+        
+        li:first-of-type { background-color: $blue; }
+        
     }
 }
 
+/*-------------------------------
+SERVICES
+--------------------------------*/
 
+.services {
+    position: relative;
+    z-index: 100;
+    color: white;
+    margin-top: 10px;
+    @include grid-column(12, $services-grid);
+    
+    div {
+        font-size: 94%;
+        
+        .fa { margin-bottom: 20px; }
+        
+        span { font-size: 110%; }
+        
+        a {
+            color: rgb(117, 195, 114);
+            text-decoration: underline;
+        }
+    }
+
+    .consult {
+        text-align: center;
+        @include grid-shift(1, $services-grid);
+        @include grid-column(2, $services-grid);
+        
+        @include tablet-landscape-and-below {
+           @include grid-shift(2, $services-grid);   
+        }
+        
+    }
+    .implement {
+        text-align: center;
+        @include grid-shift(3, $services-grid);
+        @include grid-column(2, $services-grid);
+        
+    }
+    .manage {
+        text-align: center;
+        @include grid-shift(5, $services-grid);
+        @include grid-column(2, $services-grid);
+        
+        @include tablet-landscape-and-below {
+           @include grid-shift(4, $services-grid);  
+        }
+        
+    }
+}
+
+/*-------------------------------
+BACKGROUND
+--------------------------------*/
+
+.logo {
+    position: absolute;
+    right: 0;
+    top: 220px;
+    z-index: -200;
+    width: 650px;
+    height: auto;
+    
+    @include tablet-landscape-and-below {
+        width: 500px;
+        top: 140px;
+    }
+    
+    @include tablet-portrait-and-below {
+        width: 250px;
+        top: 250px;
+    }
+    
+    @include mobile-landscape-and-below {
+        width: 160px;
+        top: 180px;  
+    }
+    
+    @include mobile-portrait-and-below {
+        top: 230px;
+    }
+}
+
+.slope {
+    position: relative;
+    z-index: -100;
+    width: 100.15%;
+    margin: 30px 0 -30px -2px;
+    
+    @include tablet-portrait-and-below {
+        width: 100.35%;
+    }
+    
+    @include mobile-landscape-and-below {
+        width: 100.85%;
+    }
+}
+
+.services-background {
+    position: relative;
+    background-color: $blue;
+    height: 340px;
+    width: 100%;
+    z-index: -100;
+    
+    @include tablet-landscape-and-below {
+        height: 280px;
+    }
+    
+    @include tablet-portrait-and-below {
+        margin-top: 20px; 
+    }
+    
+    @include mobile-landscape-and-below {
+        height: 230px;
+    }
+}
+
+.footer {
+    position: relative;
+    background-color: $darkBlue;
+    height: 30px;
+    width: 100%;
+    margin-bottom: 80px;
+}
+
+/*-------------------------------
+NAV DRAW
+--------------------------------*/
+
+.nav-draw-icon {
+    position: absolute;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #c6c6c6;
+    top: 15px;
+    left: 15px;
+    color: #111;
+    z-index: 200;
+    display: none;
+    
+    @include mobile-landscape-and-below {
+        display: block;
+    }
+    
+}
+
+.sidenav {
+    height: 100%; 
+    width: 0; 
+    position: fixed;
+    z-index: 500;
+    top: 0;
+    left: 0;
+    background-color: $darkBlue;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+    
+    @include mobile-landscape-and-below {
+        padding-top: 15px;
+    }
+    
+    a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s; 
+        
+        @include mobile-landscape-and-below {
+            font-size: 18px;
+        }
+    }
+    
+    .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+}
