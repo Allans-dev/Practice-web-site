@@ -28,27 +28,24 @@ a {
     cursor: pointer;
 }
 
-.row {
-    max-width: 1140px;
-    margin: 0 auto;
-    position: relative;
-}
-
 /*-------------------------------
 NAV BAR
 --------------------------------*/
 
 nav {
-    margin-top: 30px;
+    padding-top: 30px;
+    max-width: 1140px;
+    margin: 0 auto;
+    position: relative;
     
     @include mobile-landscape-and-below {
         margin-top: 10px;
     }
     
     ul {
-        float: right;
+        position: relative;
+        z-index: 300;
         list-style: none;
-        width: 100%;
         padding: 0;
         text-align: right;
         @include grid-column(12, $nav-grid);
@@ -84,6 +81,8 @@ TITLE
     position: relative;
     display: block;
     padding-top: 180px;
+    max-width: 1140px;
+    margin: 0 auto;
     
     @include tablet-landscape-and-below {
         padding-top: 100px;
@@ -167,12 +166,15 @@ SERVICES
 
 .services {
     position: relative;
-    z-index: 100;
+    max-width: 1140px;
+    margin: 0 auto;
+    z-index: 200;
     color: white;
     margin-top: 10px;
-    @include grid-column(12, $services-grid);
     
     div {
+        position: relative;
+        z-index: 200;
         font-size: 94%;
         
         .fa { margin-bottom: 20px; }
@@ -221,7 +223,7 @@ BACKGROUND
     position: absolute;
     right: 0;
     top: 220px;
-    z-index: -200;
+    z-index: 100;
     width: 650px;
     height: auto;
     
@@ -247,8 +249,8 @@ BACKGROUND
 
 .slope {
     position: relative;
-    z-index: -100;
-    width: 100.15%;
+    z-index: 100;
+    width: 100.20%;
     margin: 30px 0 -30px -2px;
     
     @include tablet-portrait-and-below {
@@ -265,7 +267,7 @@ BACKGROUND
     background-color: $blue;
     height: 340px;
     width: 100%;
-    z-index: -100;
+    z-index: 100;
     
     @include tablet-landscape-and-below {
         height: 280px;
