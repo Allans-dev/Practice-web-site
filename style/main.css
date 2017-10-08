@@ -200,8 +200,11 @@ BACKGROUND
       top: 250px; } }
   @media only screen and (max-width: 480px) {
     .logo {
-      top: 180px;
-      width: 160px; } }
+      width: 160px;
+      top: 180px; } }
+  @media (max-width: 320px) {
+    .logo {
+      top: 230px; } }
 
 .slope {
   position: relative;
@@ -262,7 +265,7 @@ NAV DRAW
   z-index: 500;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: #212934;
   overflow-x: hidden;
   padding-top: 60px;
   transition: 0.5s; }

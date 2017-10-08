@@ -236,8 +236,12 @@ BACKGROUND
     }
     
     @include mobile-landscape-and-below {
-        top: 180px;
         width: 160px;
+        top: 180px;  
+    }
+    
+    @include mobile-portrait-and-below {
+        top: 230px;
     }
 }
 
@@ -312,7 +316,7 @@ NAV DRAW
     z-index: 500;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: $darkBlue;
     overflow-x: hidden;
     padding-top: 60px;
     transition: 0.5s;
@@ -321,7 +325,7 @@ NAV DRAW
         padding-top: 15px;
     }
     
-    a{
+    a {
         padding: 8px 8px 8px 32px;
         text-decoration: none;
         font-size: 25px;
