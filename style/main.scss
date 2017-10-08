@@ -10,6 +10,7 @@ body {
     font-size: 16px;
     font-family: 'Libre Franklin', sans-serif;
     font-weight: 300;
+    margin: 0;
     
     @include tablet-landscape-and-below {
         font-size: 13px;
@@ -82,10 +83,11 @@ TITLE
     
     @include tablet-landscape-and-below {
         padding-top: 100px;
+        margin-left: 10px;
     }
     
     @include tablet-portrait-and-below {
-        padding-left: 10px;
+        margin-left: 10px;
     }
     
     @include mobile-landscape-and-below {
@@ -163,7 +165,7 @@ SERVICES
     position: relative;
     z-index: 100;
     color: white;
-    margin-top: 40px;
+    margin-top: 10px;
     @include grid-column(12, $services-grid);
     
     div {
@@ -213,7 +215,7 @@ BACKGROUND
 
 .logo {
     position: absolute;
-    right: -15px;
+    right: 0;
     top: 220px;
     z-index: -200;
     width: 650px;
@@ -238,20 +240,31 @@ BACKGROUND
 .slope {
     position: relative;
     z-index: -100;
-    width: 110%;
-    margin: 30px 0 -5px -10px;
+    width: 100.15%;
+    margin: 30px 0 -30px -2px;
+    
+    @include tablet-portrait-and-below {
+        width: 100.35%;
+    }
+    
+    @include mobile-landscape-and-below {
+        width: 100.85%;
+    }
 }
 
 .services-background {
     position: relative;
     background-color: $blue;
     height: 340px;
-    width: 110%;
+    width: 100%;
     z-index: -100;
-    left: -5%;
     
     @include tablet-landscape-and-below {
         height: 280px;
+    }
+    
+    @include tablet-portrait-and-below {
+        margin-top: 20px; 
     }
     
     @include mobile-landscape-and-below {
@@ -263,8 +276,7 @@ BACKGROUND
     position: relative;
     background-color: $darkBlue;
     height: 30px;
-    width: 110%;
-    left: -5%;
+    width: 100%;
     margin-bottom: 80px;
 }
 
