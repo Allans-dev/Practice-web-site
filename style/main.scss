@@ -53,6 +53,10 @@ nav {
         text-align: right;
         @include grid-column(12, $nav-grid);
         
+        @include mobile-landscape-and-below {
+            display: none;
+        }
+        
         li {
             display: inline-flex;
             padding: 10px 19px;
@@ -280,4 +284,61 @@ BACKGROUND
     margin-bottom: 80px;
 }
 
+/*-------------------------------
+NAV DRAW
+--------------------------------*/
 
+.nav-draw-icon {
+    position: absolute;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #c6c6c6;
+    top: 15px;
+    left: 15px;
+    color: #111;
+    z-index: 200;
+    display: none;
+    
+    @include mobile-landscape-and-below {
+        display: block;
+    }
+    
+}
+
+.sidenav {
+    height: 100%; 
+    width: 0; 
+    position: fixed;
+    z-index: 500;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+    
+    @include mobile-landscape-and-below {
+        padding-top: 15px;
+    }
+    
+    a{
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s; 
+        
+        @include mobile-landscape-and-below {
+            font-size: 18px;
+        }
+    }
+    
+    .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+}
