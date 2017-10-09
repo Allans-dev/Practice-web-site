@@ -15,10 +15,10 @@ body {
   margin: 0; }
   @media only screen and (max-width: 1024px) {
     body {
-      font-size: 13px; } }
+      font-size: 14px; } }
   @media only screen and (max-width: 480px) {
     body {
-      font-size: 10px; } }
+      font-size: 12px; } }
 
 a {
   text-decoration: none;
@@ -67,7 +67,8 @@ nav {
       nav ul li a:active {
         background-color: #0b4e70;
         color: #dedede; }
-    nav ul li:last-of-type a {
+    nav ul li:last-of-type a:link,
+    nav ul li:last-of-type a:visited {
       color: #d6d7d8;
       background-color: #212934;
       -webkit-transition: color, background-color 0.3s;
@@ -108,6 +109,9 @@ TITLE
     @media only screen and (max-width: 768px) {
       .title h1 {
         font-size: 280%; } }
+    @media only screen and (max-width: 480px) {
+      .title h1 {
+        font-size: 240%; } }
   .title span {
     font-weight: 400;
     font-size: 125%;
@@ -120,6 +124,9 @@ TITLE
     @media only screen and (max-width: 768px) {
       .title span {
         font-size: 100%; } }
+    @media only screen and (max-width: 480px) {
+      .title span {
+        letter-spacing: 0; } }
   .title ul {
     position: relative;
     text-align: right;
@@ -160,8 +167,7 @@ SERVICES
   margin-top: 10px; }
   .services div {
     position: relative;
-    z-index: 200;
-    font-size: 94%; }
+    z-index: 200; }
     .services div .fa {
       margin-bottom: 20px; }
     .services div span {
@@ -169,35 +175,59 @@ SERVICES
     .services div a {
       color: #75c372;
       text-decoration: underline; }
+    @media only screen and (max-width: 480px) {
+      .services div {
+        margin-top: 25px; } }
   .services .consult {
     text-align: center;
-    left: calc(8.3333333333% + 0px);
+    left: calc(8.3333333333% - 5.4166666667px + 5px);
     position: relative;
-    width: calc(16.6666666667%);
+    width: calc(16.6666666667% - 5.8333333333px);
     float: left;
-    margin-left: 0px; }
+    margin-left: 5px; }
     @media only screen and (max-width: 1024px) {
       .services .consult {
-        left: calc(16.6666666667% + 0px);
+        left: calc(16.6666666667% - 5.8333333333px + 5px);
         position: relative; } }
+    @media only screen and (max-width: 480px) {
+      .services .consult {
+        left: calc(0% - 5px + 5px);
+        position: relative;
+        width: calc(100% - 10px);
+        float: left;
+        margin-left: 5px; } }
   .services .implement {
     text-align: center;
-    left: calc(25% + 0px);
+    left: calc(25% - 6.25px + 5px);
     position: relative;
-    width: calc(16.6666666667%);
+    width: calc(16.6666666667% - 5.8333333333px);
     float: left;
-    margin-left: 0px; }
+    margin-left: 5px; }
+    @media only screen and (max-width: 480px) {
+      .services .implement {
+        left: calc(0% - 5px + 5px);
+        position: relative;
+        width: calc(100% - 10px);
+        float: left;
+        margin-left: 5px; } }
   .services .manage {
     text-align: center;
-    left: calc(41.6666666667% + 0px);
+    left: calc(41.6666666667% - 7.0833333333px + 5px);
     position: relative;
-    width: calc(16.6666666667%);
+    width: calc(16.6666666667% - 5.8333333333px);
     float: left;
-    margin-left: 0px; }
+    margin-left: 5px; }
     @media only screen and (max-width: 1024px) {
       .services .manage {
-        left: calc(33.3333333333% + 0px);
+        left: calc(33.3333333333% - 6.6666666667px + 5px);
         position: relative; } }
+    @media only screen and (max-width: 480px) {
+      .services .manage {
+        left: calc(0% - 5px + 5px);
+        position: relative;
+        width: calc(100% - 10px);
+        float: left;
+        margin-left: 5px; } }
 
 /*-------------------------------
 BACKGROUND
@@ -220,7 +250,7 @@ BACKGROUND
   @media only screen and (max-width: 480px) {
     .logo {
       width: 160px;
-      top: 180px; } }
+      top: 210px; } }
   @media (max-width: 320px) {
     .logo {
       top: 230px; } }
@@ -251,7 +281,7 @@ BACKGROUND
       margin-top: 20px; } }
   @media only screen and (max-width: 480px) {
     .services-background {
-      height: 230px; } }
+      height: 520px; } }
 
 .footer {
   position: relative;

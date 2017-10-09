@@ -14,11 +14,11 @@ body {
     margin: 0;
     
     @include tablet-landscape-and-below {
-        font-size: 13px;
+        font-size: 14px;
     }
     
     @include mobile-landscape-and-below {
-        font-size: 10px;
+        font-size: 12px;
     }
     
 }
@@ -83,7 +83,8 @@ nav {
          
         li:last-of-type {
             
-            a {
+            a:link,
+            a:visited {
                 color: rgb(214, 215, 216);
                 background-color: $darkBlue;
                 -webkit-transition: color, background-color 0.3s;
@@ -139,6 +140,9 @@ TITLE
             font-size: 280%;
         }
         
+        @include mobile-landscape-and-below {
+            font-size: 240%;
+        }
     }
     
     span {
@@ -151,6 +155,10 @@ TITLE
         
         @include tablet-portrait-and-below {
             font-size: 100%;
+        }
+        
+        @include mobile-landscape-and-below {
+            letter-spacing: 0;
         }
 
     }
@@ -202,7 +210,6 @@ SERVICES
     div {
         position: relative;
         z-index: 200;
-        font-size: 94%;
         
         .fa { margin-bottom: 20px; }
         
@@ -211,6 +218,10 @@ SERVICES
         a {
             color: rgb(117, 195, 114);
             text-decoration: underline;
+        }
+        
+        @include mobile-landscape-and-below {
+            margin-top: 25px;
         }
     }
 
@@ -223,11 +234,21 @@ SERVICES
            @include grid-shift(2, $services-grid);   
         }
         
+        @include mobile-landscape-and-below {
+            @include grid-shift(0, $services-grid);
+            @include grid-column(12, $services-grid);
+        }
+        
     }
     .implement {
         text-align: center;
         @include grid-shift(3, $services-grid);
         @include grid-column(2, $services-grid);
+        
+        @include mobile-landscape-and-below {
+            @include grid-shift(0, $services-grid);
+            @include grid-column(12, $services-grid);
+        }
         
     }
     .manage {
@@ -239,6 +260,10 @@ SERVICES
            @include grid-shift(4, $services-grid);  
         }
         
+        @include mobile-landscape-and-below {
+            @include grid-shift(0, $services-grid);
+            @include grid-column(12, $services-grid);
+        }
     }
 }
 
@@ -266,7 +291,7 @@ BACKGROUND
     
     @include mobile-landscape-and-below {
         width: 160px;
-        top: 180px;  
+        top: 210px;  
     }
     
     @include mobile-portrait-and-below {
@@ -305,7 +330,7 @@ BACKGROUND
     }
     
     @include mobile-landscape-and-below {
-        height: 230px;
+        height: 520px;
     }
 }
 
