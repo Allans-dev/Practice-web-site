@@ -10,6 +10,7 @@ body {
     font-size: 16px;
     font-family: 'Libre Franklin', sans-serif;
     font-weight: 300;
+    color: $textBlack;
     margin: 0;
     
     @include tablet-landscape-and-below {
@@ -56,18 +57,44 @@ nav {
         
         li {
             display: inline-flex;
-            padding: 10px 19px;
-            font-weight: 200;
             
-            @include mobile-landscape-and-below {
-                font-size: 85%;
-                padding: 5px 8px;
+            a:link,
+            a:visited {
+                padding: 10px 19px;
+                font-weight: 200;
+                color: $textBlack;
+                background-color: transparent;
+                -webkit-transition: color, background-color 0.3s;
+                transition: color, background-color 0.3s;
+
+                @include mobile-landscape-and-below {
+                    font-size: 85%;
+                    padding: 5px 8px;
+                }
             }
-        }
+            
+            a:hover,
+            a:active {
+                background-color: rgb(11,78,112);
+                color: $textWhite;
+            } 
         
+        }
+         
         li:last-of-type {
-            background-color: rgb(33, 39, 51);
-            color: rgb(214, 215, 216);
+            
+            a {
+                color: rgb(214, 215, 216);
+                background-color: $darkBlue;
+                -webkit-transition: color, background-color 0.3s;
+                transition: color, background-color 0.3s;
+            }
+            
+            a:hover,
+            a:active {
+                background-color: $green;
+                color: white;
+            } 
         }
     }
     
@@ -169,7 +196,7 @@ SERVICES
     max-width: 1140px;
     margin: 0 auto;
     z-index: 200;
-    color: white;
+    color: $textWhite;
     margin-top: 10px;
     
     div {
@@ -223,7 +250,7 @@ BACKGROUND
     position: absolute;
     right: 0;
     top: 220px;
-    z-index: 100;
+    z-index: -100;
     width: 650px;
     height: auto;
     

@@ -11,6 +11,7 @@ body {
   font-size: 16px;
   font-family: 'Libre Franklin', sans-serif;
   font-weight: 300;
+  color: #414141;
   margin: 0; }
   @media only screen and (max-width: 1024px) {
     body {
@@ -48,16 +49,33 @@ nav {
       nav ul {
         display: none; } }
     nav ul li {
-      display: inline-flex;
-      padding: 10px 19px;
-      font-weight: 200; }
-      @media only screen and (max-width: 480px) {
-        nav ul li {
-          font-size: 85%;
-          padding: 5px 8px; } }
-    nav ul li:last-of-type {
-      background-color: #212733;
-      color: #d6d7d8; }
+      display: inline-flex; }
+      nav ul li a:link,
+      nav ul li a:visited {
+        padding: 10px 19px;
+        font-weight: 200;
+        color: #414141;
+        background-color: transparent;
+        -webkit-transition: color, background-color 0.3s;
+        transition: color, background-color 0.3s; }
+        @media only screen and (max-width: 480px) {
+          nav ul li a:link,
+          nav ul li a:visited {
+            font-size: 85%;
+            padding: 5px 8px; } }
+      nav ul li a:hover,
+      nav ul li a:active {
+        background-color: #0b4e70;
+        color: #dedede; }
+    nav ul li:last-of-type a {
+      color: #d6d7d8;
+      background-color: #212934;
+      -webkit-transition: color, background-color 0.3s;
+      transition: color, background-color 0.3s; }
+    nav ul li:last-of-type a:hover,
+    nav ul li:last-of-type a:active {
+      background-color: #75c372;
+      color: white; }
 
 /*-------------------------------
 TITLE
@@ -138,7 +156,7 @@ SERVICES
   max-width: 1140px;
   margin: 0 auto;
   z-index: 200;
-  color: white;
+  color: #dedede;
   margin-top: 10px; }
   .services div {
     position: relative;
@@ -188,7 +206,7 @@ BACKGROUND
   position: absolute;
   right: 0;
   top: 220px;
-  z-index: 100;
+  z-index: -100;
   width: 650px;
   height: auto; }
   @media only screen and (max-width: 1024px) {
