@@ -267,7 +267,22 @@ BACKGROUND
     .slope {
       width: 100.85%; } }
 
+.services-background:before {
+  content: "";
+  position: relative;
+  height: 0;
+  width: 0;
+  bottom: 12.3vw;
+  left: 0;
+  border-top-width: 0;
+  border-left-width: 0;
+  border-right-width: 100vw;
+  border-bottom-width: 11vw;
+  border-style: solid;
+  border-color: transparent transparent #75c372; }
+
 .services-background {
+  margin-top: 300px;
   position: relative;
   background-color: #0b4e70;
   height: 340px;
