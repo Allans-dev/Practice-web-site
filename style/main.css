@@ -25,14 +25,16 @@ a {
   color: inherit;
   cursor: pointer; }
 
+.row {
+  max-width: 1140px;
+  margin: 0 auto;
+  position: relative; }
+
 /*-------------------------------
 NAV BAR
 --------------------------------*/
 nav {
-  padding-top: 30px;
-  max-width: 1140px;
-  margin: 0 auto;
-  position: relative; }
+  padding-top: 30px; }
   @media only screen and (max-width: 480px) {
     nav {
       margin-top: 10px; } }
@@ -81,38 +83,37 @@ nav {
 /*-------------------------------
 TITLE
 --------------------------------*/
-.title {
-  position: relative;
+.swiper-container {
   display: block;
-  padding-top: 180px;
-  max-width: 1140px;
-  margin: 0 auto; }
+  padding-top: 100px;
+  width: 700px;
+  margin: 0; }
   @media only screen and (max-width: 1024px) {
-    .title {
+    .swiper-container {
       padding-top: 100px;
       margin-left: 10px; } }
   @media only screen and (max-width: 768px) {
-    .title {
+    .swiper-container {
       margin-left: 10px; } }
   @media only screen and (max-width: 480px) {
-    .title {
+    .swiper-container {
       padding-top: 40px; } }
-  .title h1 {
+  .swiper-container h1 {
     font-family: 'Work Sans', sans-serif;
     font-weight: 200;
     font-size: 345%;
     margin-bottom: 20px;
     letter-spacing: 1px; }
     @media only screen and (max-width: 1024px) {
-      .title h1 {
+      .swiper-container h1 {
         margin-bottom: 10px; } }
     @media only screen and (max-width: 768px) {
-      .title h1 {
+      .swiper-container h1 {
         font-size: 280%; } }
     @media only screen and (max-width: 480px) {
-      .title h1 {
+      .swiper-container h1 {
         font-size: 240%; } }
-  .title span {
+  .swiper-container span {
     font-weight: 400;
     font-size: 125%;
     color: #707071;
@@ -122,40 +123,37 @@ TITLE
     float: left;
     margin-left: 0px; }
     @media only screen and (max-width: 768px) {
-      .title span {
+      .swiper-container span {
         font-size: 100%; } }
     @media only screen and (max-width: 480px) {
-      .title span {
+      .swiper-container span {
         letter-spacing: 0; } }
 
-.circles {
+.swiper-pagination {
   position: relative;
   text-align: right;
-  left: -95px;
-  margin-top: 40px;
+  margin: 40px 0 0 0 !important;
   width: calc(58.3333333333% - 31.6666666667px);
   float: left;
   margin-left: 20px; }
   @media only screen and (max-width: 1024px) {
-    .circles {
+    .swiper-pagination {
       margin-top: 20px; } }
   @media only screen and (max-width: 480px) {
-    .circles {
+    .swiper-pagination {
       width: calc(75% - 35px);
       float: left;
       margin-left: 20px; } }
-  .circles li {
+  .swiper-pagination li {
     list-style: none;
     display: inline-flex;
-    background-color: #cecece;
+    background-color: #0b4e70;
     padding: 7px;
     border-radius: 50%;
     cursor: pointer; }
     @media only screen and (max-width: 768px) {
-      .circles li {
+      .swiper-pagination li {
         padding: 5px; } }
-  .circles li:first-of-type {
-    background-color: #0b4e70; }
 
 /*-------------------------------
 SERVICES

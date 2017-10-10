@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:200, 300" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:200, 300, 400" rel="stylesheet">
     
+    <link type="text/css" rel="stylesheet" href="./style/swiper.min.css">
     <link type="text/css" rel="stylesheet" href="./style/main.css">
 </head>
 <body>
@@ -16,29 +17,47 @@
     <div class="nav-draw-icon" onclick="openNav()">
         <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
     </div>
-
-    <nav>
-        <ul>
-            <li><a target="_blank" href="#">HOME</a></li>
-            <li><a target="_blank" href="#">CONSULT</a></li>
-            <li><a target="_blank" href="#">IMPLEMENT</a></li>
-            <li><a target="_blank" href="#">MANAGE</a></li>
-            <li><a target="_blank" href="#">ABOUT</a></li>
-            <li><a target="_blank" href="#">CONTACT</a></li>
-        </ul>
-    </nav>
     
-    <div class="title">
-        <h1>INNOVATIVE STRATEGY <br />
-        WORLD CLASS DELIVERY</h1>
-        <span>Accelerating your business transformation and Cloud journey.</span>
+    <div class="row">
+        <nav>
+            <ul>
+                <li><a target="_blank" href="#">HOME</a></li>
+                <li><a target="_blank" href="#">CONSULT</a></li>
+                <li><a target="_blank" href="#">IMPLEMENT</a></li>
+                <li><a target="_blank" href="#">MANAGE</a></li>
+                <li><a target="_blank" href="#">ABOUT</a></li>
+                <li><a target="_blank" href="#">CONTACT</a></li>
+            </ul>
+        </nav>
     </div>
     
-    <ul class="circles">
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
+    <div class="row">
+        <div class="swiper-container">
+
+            <div class="swiper-wrapper">
+
+                <div class="title swiper-slide">
+                    <h1>INNOVATIVE STRATEGY <br />
+                    WORLD CLASS DELIVERY</h1>
+                    <span>Accelerating your business transformation and Cloud journey.</span>
+                </div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+
+            </div>
+            
+
+            <div class="swiper-pagination"></div>
+                <!--
+            <ul class="circles swiper-pagination">
+                <li class="swiper-pagination-bullets"></li>
+                <li class="swiper-pagination-bullets"></li>
+                <li class="swiper-pagination-bullets"></li>
+            </ul>
+-->
+
+        </div>
+    </div>
     
     <img class="logo" alt="logo" src="imgs/logo.svg">
     
@@ -78,6 +97,24 @@
         <a target="_blank" href="#">CONTACT</a>
     </div>
     
+    <script type="text/javascript" src="src/swiper.min.js"></script>
+    <script type="text/javascript" src="src/main.js"></script>
+    
+    <script>        
+      var mySwiper = new Swiper ('.swiper-container', {
+
+        direction: 'horizontal',
+        loop: true,
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        paginationType: 'bullets',
+        paginationBulletRender: function (swiper, index, className) {
+            return '<li class=' + className + '></li>';
+        }
+
+      });
+    </script>
+    
 </body>
-    <script type="text/javascript" src="main.js"></script>
+    
 </html>

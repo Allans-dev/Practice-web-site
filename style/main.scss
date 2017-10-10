@@ -29,15 +29,18 @@ a {
     cursor: pointer;
 }
 
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
+    position: relative;
+}
+
 /*-------------------------------
 NAV BAR
 --------------------------------*/
 
 nav {
     padding-top: 30px;
-    max-width: 1140px;
-    margin: 0 auto;
-    position: relative;
     
     @include mobile-landscape-and-below {
         margin-top: 10px;
@@ -105,12 +108,11 @@ nav {
 TITLE
 --------------------------------*/
 
-.title {
-    position: relative;
+.swiper-container {
     display: block;
-    padding-top: 180px;
-    max-width: 1140px;
-    margin: 0 auto;
+    padding-top: 100px;
+    width: 700px;
+    margin: 0;
     
     @include tablet-landscape-and-below {
         padding-top: 100px;
@@ -165,11 +167,10 @@ TITLE
     
 }
 
-.circles {
+    .swiper-pagination {
         position: relative;
         text-align: right;
-        left: -95px;
-        margin-top: 40px;
+        margin: 40px 0 0 0 !important;
         @include grid-column(7);
         
         @include tablet-landscape-and-below {
@@ -183,7 +184,7 @@ TITLE
         li {
             list-style: none;
             display: inline-flex;
-            background-color: rgb(206,206,206);
+            background-color: $blue;
             padding: 7px;
             border-radius: 50%;
             cursor: pointer;
@@ -192,9 +193,7 @@ TITLE
                 padding: 5px;
             }
         }
-        
-        li:first-of-type { background-color: $blue; }
-        
+
     }
 
 /*-------------------------------
