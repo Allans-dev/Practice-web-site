@@ -33,6 +33,7 @@ a {
     max-width: 1140px;
     margin: 0 auto;
     position: relative;
+    padding: 0 10px;
 }
 
 /*-------------------------------
@@ -40,10 +41,12 @@ NAV BAR
 --------------------------------*/
 
 nav {
-    padding-top: 30px;
+    padding: 30px 10px 0;
+    position: absolute;
+    right: 0;
     
-    @include mobile-landscape-and-below {
-        margin-top: 10px;
+    @include tablet-portrait-and-below {
+        padding-top: 10px;
     }
     
     ul {
@@ -69,11 +72,16 @@ nav {
                 background-color: transparent;
                 -webkit-transition: color, background-color 0.3s;
                 transition: color, background-color 0.3s;
+                
+                @include tablet-portrait-and-below {
+                    padding: 10px 10px;
+                }
 
                 @include mobile-landscape-and-below {
                     font-size: 85%;
                     padding: 5px 8px;
                 }
+                    
             }
             
             a:hover,
@@ -105,26 +113,28 @@ nav {
 }
 
 /*-------------------------------
-TITLE
+TITLE / SWIPER
 --------------------------------*/
 
 .swiper-container {
     display: block;
-    padding-top: 100px;
+    padding-top: 180px;
     width: 700px;
     margin: 0;
     
     @include tablet-landscape-and-below {
-        padding-top: 100px;
-        margin-left: 10px;
+        padding-top: 200px;
+        width: 600px;
     }
     
     @include tablet-portrait-and-below {
-        margin-left: 10px;
+        padding-top: 120px;
+        width: 500px;
     }
     
     @include mobile-landscape-and-below {
-        padding-top: 40px;
+        padding-top: 140px;
+        width: 370px;
     }
     
     h1 {
@@ -170,30 +180,33 @@ TITLE
     .swiper-pagination {
         position: relative;
         text-align: right;
-        margin: 40px 0 0 0 !important;
-        @include grid-column(7);
+        margin: 70px 0 0 0 !important;
+        width: 94% !important;
+        opacity: 1 !important;
         
         @include tablet-landscape-and-below {
-            margin-top: 20px;   
+            margin-top: 40px !important;  
+            text-align: center;
         }
           
         @include mobile-landscape-and-below {
-            @include grid-column(9);
+            margin-top: 30px !important;  
         }
         
-        li {
-            list-style: none;
-            display: inline-flex;
-            background-color: $blue;
-            padding: 7px;
-            border-radius: 50%;
-            cursor: pointer;
+        .swiper-pagination-bullet { 
+            opacity: 1; 
+            background-color: rgb(206, 206, 206);
+            padding: 5px;
             
-            @include tablet-portrait-and-below {
-                padding: 5px;
+            @include mobile-landscape-and-below {
+                padding: 3px;  
             }
         }
-
+        
+        .swiper-pagination-bullet-active {
+            background-color: $blue;
+        }
+        
     }
 
 /*-------------------------------
@@ -206,7 +219,7 @@ SERVICES
     margin: 0 auto;
     z-index: 200;
     color: $textWhite;
-    margin-top: 10px;
+    margin-top: 20px;
     
     div {
         position: relative;
@@ -281,38 +294,23 @@ BACKGROUND
     
     @include tablet-landscape-and-below {
         width: 500px;
-        top: 210px;
+        top: 270px;
     }
     
     @include tablet-portrait-and-below {
         width: 250px;
-        top: 250px;
+        top: 270px;
     }
     
     @include mobile-landscape-and-below {
         width: 160px;
-        top: 210px;  
+        top: 260px;  
     }
     
     @include mobile-portrait-and-below {
         top: 230px;
     }
 }
-
-//.slope {
-//    position: relative;
-//    z-index: 100;
-//    width: 100.20%;
-//    margin: 30px 0 -30px -2px;
-//    
-//    @include tablet-portrait-and-below {
-//        width: 100.35%;
-//    }
-//    
-//    @include mobile-landscape-and-below {
-//        width: 100.85%;
-//    }
-//}
 
 .services-background:before {
     content: "";
@@ -328,7 +326,7 @@ BACKGROUND
 }
 
 .services-background {
-    margin-top: 300px;
+    margin-top: 230px;
     position: relative;
     background-color: $blue;
     height: 340px;
@@ -337,14 +335,15 @@ BACKGROUND
     
     @include tablet-landscape-and-below {
         height: 280px;
+        margin-top: 200px;
     }
     
     @include tablet-portrait-and-below {
-        margin-top: 180px;
+        margin-top: 130px;
     }
     
     @include mobile-landscape-and-below {
-        margin-top: 150px;
+        margin-top: 80px;
         height: 510px;
     }
 }
@@ -354,7 +353,15 @@ BACKGROUND
     background-color: $darkBlue;
     height: 30px;
     width: 100%;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
+    
+    @include tablet-portrait-and-below {
+        margin-bottom: 40px;
+    }
+    
+    @include mobile-landscape-and-below {
+        margin-bottom: 30px;
+    }
 }
 
 /*-------------------------------

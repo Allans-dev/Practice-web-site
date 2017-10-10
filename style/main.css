@@ -28,16 +28,19 @@ a {
 .row {
   max-width: 1140px;
   margin: 0 auto;
-  position: relative; }
+  position: relative;
+  padding: 0 10px; }
 
 /*-------------------------------
 NAV BAR
 --------------------------------*/
 nav {
-  padding-top: 30px; }
-  @media only screen and (max-width: 480px) {
+  padding: 30px 10px 0;
+  position: absolute;
+  right: 0; }
+  @media only screen and (max-width: 768px) {
     nav {
-      margin-top: 10px; } }
+      padding-top: 10px; } }
   nav ul {
     position: relative;
     z-index: 300;
@@ -60,6 +63,10 @@ nav {
         background-color: transparent;
         -webkit-transition: color, background-color 0.3s;
         transition: color, background-color 0.3s; }
+        @media only screen and (max-width: 768px) {
+          nav ul li a:link,
+          nav ul li a:visited {
+            padding: 10px 10px; } }
         @media only screen and (max-width: 480px) {
           nav ul li a:link,
           nav ul li a:visited {
@@ -68,7 +75,7 @@ nav {
       nav ul li a:hover,
       nav ul li a:active {
         background-color: #0b4e70;
-        color: #dedede; }
+        color: #ededed; }
     nav ul li:last-of-type a:link,
     nav ul li:last-of-type a:visited {
       color: #d6d7d8;
@@ -81,23 +88,25 @@ nav {
       color: white; }
 
 /*-------------------------------
-TITLE
+TITLE / SWIPER
 --------------------------------*/
 .swiper-container {
   display: block;
-  padding-top: 100px;
+  padding-top: 180px;
   width: 700px;
   margin: 0; }
   @media only screen and (max-width: 1024px) {
     .swiper-container {
-      padding-top: 100px;
-      margin-left: 10px; } }
+      padding-top: 200px;
+      width: 600px; } }
   @media only screen and (max-width: 768px) {
     .swiper-container {
-      margin-left: 10px; } }
+      padding-top: 120px;
+      width: 500px; } }
   @media only screen and (max-width: 480px) {
     .swiper-container {
-      padding-top: 40px; } }
+      padding-top: 140px;
+      width: 370px; } }
   .swiper-container h1 {
     font-family: 'Work Sans', sans-serif;
     font-weight: 200;
@@ -132,28 +141,25 @@ TITLE
 .swiper-pagination {
   position: relative;
   text-align: right;
-  margin: 40px 0 0 0 !important;
-  width: calc(58.3333333333% - 31.6666666667px);
-  float: left;
-  margin-left: 20px; }
+  margin: 70px 0 0 0 !important;
+  width: 94% !important;
+  opacity: 1 !important; }
   @media only screen and (max-width: 1024px) {
     .swiper-pagination {
-      margin-top: 20px; } }
+      margin-top: 40px !important;
+      text-align: center; } }
   @media only screen and (max-width: 480px) {
     .swiper-pagination {
-      width: calc(75% - 35px);
-      float: left;
-      margin-left: 20px; } }
-  .swiper-pagination li {
-    list-style: none;
-    display: inline-flex;
-    background-color: #0b4e70;
-    padding: 7px;
-    border-radius: 50%;
-    cursor: pointer; }
-    @media only screen and (max-width: 768px) {
-      .swiper-pagination li {
-        padding: 5px; } }
+      margin-top: 30px !important; } }
+  .swiper-pagination .swiper-pagination-bullet {
+    opacity: 1;
+    background-color: #cecece;
+    padding: 5px; }
+    @media only screen and (max-width: 480px) {
+      .swiper-pagination .swiper-pagination-bullet {
+        padding: 3px; } }
+  .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #0b4e70; }
 
 /*-------------------------------
 SERVICES
@@ -163,8 +169,8 @@ SERVICES
   max-width: 1140px;
   margin: 0 auto;
   z-index: 200;
-  color: #dedede;
-  margin-top: 10px; }
+  color: #ededed;
+  margin-top: 20px; }
   .services div {
     position: relative;
     z-index: 200; }
@@ -241,15 +247,15 @@ BACKGROUND
   @media only screen and (max-width: 1024px) {
     .logo {
       width: 500px;
-      top: 210px; } }
+      top: 270px; } }
   @media only screen and (max-width: 768px) {
     .logo {
       width: 250px;
-      top: 250px; } }
+      top: 270px; } }
   @media only screen and (max-width: 480px) {
     .logo {
       width: 160px;
-      top: 210px; } }
+      top: 260px; } }
   @media (max-width: 320px) {
     .logo {
       top: 230px; } }
@@ -267,7 +273,7 @@ BACKGROUND
   border-bottom: 4vw solid #0b4e70; }
 
 .services-background {
-  margin-top: 300px;
+  margin-top: 230px;
   position: relative;
   background-color: #0b4e70;
   height: 340px;
@@ -275,13 +281,14 @@ BACKGROUND
   z-index: 100; }
   @media only screen and (max-width: 1024px) {
     .services-background {
-      height: 280px; } }
+      height: 280px;
+      margin-top: 200px; } }
   @media only screen and (max-width: 768px) {
     .services-background {
-      margin-top: 180px; } }
+      margin-top: 130px; } }
   @media only screen and (max-width: 480px) {
     .services-background {
-      margin-top: 150px;
+      margin-top: 80px;
       height: 510px; } }
 
 .footer {
@@ -289,7 +296,13 @@ BACKGROUND
   background-color: #212934;
   height: 30px;
   width: 100%;
-  margin-bottom: 80px; }
+  margin-bottom: 60px; }
+  @media only screen and (max-width: 768px) {
+    .footer {
+      margin-bottom: 40px; } }
+  @media only screen and (max-width: 480px) {
+    .footer {
+      margin-bottom: 30px; } }
 
 /*-------------------------------
 NAV DRAW
