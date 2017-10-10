@@ -318,26 +318,12 @@ BACKGROUND
     position: relative;
     height: 0;
     width: 0;
-    bottom: 12.3vw;
+    bottom: 0;
     left: 0;
-    border-top-width: 0;
-    border-left-width: 0;
-    border-right-width: 100vw;
-    border-bottom-width: 11vw;
-    border-style: solid;
-    border-color: transparent transparent $blue;
-    
-    @include tablet-landscape-and-below {
-        bottom: 12.7vw;
-    }
-    
-    @include tablet-portrait-and-below {
-        bottom: 13.2vw;
-    }
-    
-    @include mobile-landscape-and-below {
-        bottom: 14.2vw;
-    }
+    border-top: 11vw solid transparent;
+    border-left: 100vw solid $blue;
+    border-right: 0vw solid transparent;
+    border-bottom: 4vw solid $blue;
 }
 
 .services-background {

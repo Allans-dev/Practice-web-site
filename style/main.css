@@ -259,23 +259,12 @@ BACKGROUND
   position: relative;
   height: 0;
   width: 0;
-  bottom: 12.3vw;
+  bottom: 0;
   left: 0;
-  border-top-width: 0;
-  border-left-width: 0;
-  border-right-width: 100vw;
-  border-bottom-width: 11vw;
-  border-style: solid;
-  border-color: transparent transparent #0b4e70; }
-  @media only screen and (max-width: 1024px) {
-    .services-background:before {
-      bottom: 12.7vw; } }
-  @media only screen and (max-width: 768px) {
-    .services-background:before {
-      bottom: 13.2vw; } }
-  @media only screen and (max-width: 480px) {
-    .services-background:before {
-      bottom: 14.2vw; } }
+  border-top: 11vw solid transparent;
+  border-left: 100vw solid #0b4e70;
+  border-right: 0vw solid transparent;
+  border-bottom: 4vw solid #0b4e70; }
 
 .services-background {
   margin-top: 300px;
