@@ -8,7 +8,8 @@ Bourbon Neat
 Gaining Experience with:  
 Webpack  
 Photoshop  
-Illustrator
+Illustrator  
+CSS Shapes
 
 Difficulties faced include:  
  - configuring webpack with sass and bourbon-neat  

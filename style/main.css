@@ -127,33 +127,35 @@ TITLE
     @media only screen and (max-width: 480px) {
       .title span {
         letter-spacing: 0; } }
-  .title ul {
-    position: relative;
-    text-align: right;
-    left: -50px;
-    margin-top: 50px;
-    width: calc(58.3333333333% - 31.6666666667px);
-    float: left;
-    margin-left: 20px; }
-    @media only screen and (max-width: 1024px) {
-      .title ul {
-        margin-top: 20px; } }
-    @media only screen and (max-width: 480px) {
-      .title ul {
-        width: calc(75% - 35px);
-        float: left;
-        margin-left: 20px; } }
-    .title ul li {
-      list-style: none;
-      display: inline-flex;
-      background-color: #cecece;
-      padding: 7px;
-      border-radius: 50%; }
-      @media only screen and (max-width: 768px) {
-        .title ul li {
-          padding: 5px; } }
-    .title ul li:first-of-type {
-      background-color: #0b4e70; }
+
+.circles {
+  position: relative;
+  text-align: right;
+  left: -95px;
+  margin-top: 40px;
+  width: calc(58.3333333333% - 31.6666666667px);
+  float: left;
+  margin-left: 20px; }
+  @media only screen and (max-width: 1024px) {
+    .circles {
+      margin-top: 20px; } }
+  @media only screen and (max-width: 480px) {
+    .circles {
+      width: calc(75% - 35px);
+      float: left;
+      margin-left: 20px; } }
+  .circles li {
+    list-style: none;
+    display: inline-flex;
+    background-color: #cecece;
+    padding: 7px;
+    border-radius: 50%;
+    cursor: pointer; }
+    @media only screen and (max-width: 768px) {
+      .circles li {
+        padding: 5px; } }
+  .circles li:first-of-type {
+    background-color: #0b4e70; }
 
 /*-------------------------------
 SERVICES

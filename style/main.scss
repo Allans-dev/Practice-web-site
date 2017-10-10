@@ -163,11 +163,13 @@ TITLE
 
     }
     
-    ul {
+}
+
+.circles {
         position: relative;
         text-align: right;
-        left: -50px;
-        margin-top: 50px;
+        left: -95px;
+        margin-top: 40px;
         @include grid-column(7);
         
         @include tablet-landscape-and-below {
@@ -184,6 +186,7 @@ TITLE
             background-color: rgb(206,206,206);
             padding: 7px;
             border-radius: 50%;
+            cursor: pointer;
             
             @include tablet-portrait-and-below {
                 padding: 5px;
@@ -193,7 +196,6 @@ TITLE
         li:first-of-type { background-color: $blue; }
         
     }
-}
 
 /*-------------------------------
 SERVICES
