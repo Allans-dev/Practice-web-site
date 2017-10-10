@@ -220,9 +220,6 @@ SERVICES
             text-decoration: underline;
         }
         
-        @include mobile-landscape-and-below {
-            margin-top: 25px;
-        }
     }
 
     .consult {
@@ -248,6 +245,7 @@ SERVICES
         @include mobile-landscape-and-below {
             @include grid-shift(0, $services-grid);
             @include grid-column(12, $services-grid);
+            margin-top: 25px;
         }
         
     }
@@ -263,6 +261,7 @@ SERVICES
         @include mobile-landscape-and-below {
             @include grid-shift(0, $services-grid);
             @include grid-column(12, $services-grid);
+            margin-top: 25px;
         }
     }
 }
@@ -281,7 +280,7 @@ BACKGROUND
     
     @include tablet-landscape-and-below {
         width: 500px;
-        top: 140px;
+        top: 210px;
     }
     
     @include tablet-portrait-and-below {
@@ -299,20 +298,20 @@ BACKGROUND
     }
 }
 
-.slope {
-    position: relative;
-    z-index: 100;
-    width: 100.20%;
-    margin: 30px 0 -30px -2px;
-    
-    @include tablet-portrait-and-below {
-        width: 100.35%;
-    }
-    
-    @include mobile-landscape-and-below {
-        width: 100.85%;
-    }
-}
+//.slope {
+//    position: relative;
+//    z-index: 100;
+//    width: 100.20%;
+//    margin: 30px 0 -30px -2px;
+//    
+//    @include tablet-portrait-and-below {
+//        width: 100.35%;
+//    }
+//    
+//    @include mobile-landscape-and-below {
+//        width: 100.85%;
+//    }
+//}
 
 .services-background:before {
     content: "";
@@ -326,7 +325,19 @@ BACKGROUND
     border-right-width: 100vw;
     border-bottom-width: 11vw;
     border-style: solid;
-    border-color: transparent transparent $green;
+    border-color: transparent transparent $blue;
+    
+    @include tablet-landscape-and-below {
+        bottom: 12.7vw;
+    }
+    
+    @include tablet-portrait-and-below {
+        bottom: 13.2vw;
+    }
+    
+    @include mobile-landscape-and-below {
+        bottom: 14.2vw;
+    }
 }
 
 .services-background {
@@ -342,11 +353,12 @@ BACKGROUND
     }
     
     @include tablet-portrait-and-below {
-        margin-top: 20px; 
+        margin-top: 180px;
     }
     
     @include mobile-landscape-and-below {
-        height: 520px;
+        margin-top: 150px;
+        height: 510px;
     }
 }
 

@@ -175,9 +175,6 @@ SERVICES
     .services div a {
       color: #75c372;
       text-decoration: underline; }
-    @media only screen and (max-width: 480px) {
-      .services div {
-        margin-top: 25px; } }
   .services .consult {
     text-align: center;
     left: calc(8.3333333333% - 5.4166666667px + 5px);
@@ -209,7 +206,8 @@ SERVICES
         position: relative;
         width: calc(100% - 10px);
         float: left;
-        margin-left: 5px; } }
+        margin-left: 5px;
+        margin-top: 25px; } }
   .services .manage {
     text-align: center;
     left: calc(41.6666666667% - 7.0833333333px + 5px);
@@ -227,7 +225,8 @@ SERVICES
         position: relative;
         width: calc(100% - 10px);
         float: left;
-        margin-left: 5px; } }
+        margin-left: 5px;
+        margin-top: 25px; } }
 
 /*-------------------------------
 BACKGROUND
@@ -242,7 +241,7 @@ BACKGROUND
   @media only screen and (max-width: 1024px) {
     .logo {
       width: 500px;
-      top: 140px; } }
+      top: 210px; } }
   @media only screen and (max-width: 768px) {
     .logo {
       width: 250px;
@@ -254,18 +253,6 @@ BACKGROUND
   @media (max-width: 320px) {
     .logo {
       top: 230px; } }
-
-.slope {
-  position: relative;
-  z-index: 100;
-  width: 100.20%;
-  margin: 30px 0 -30px -2px; }
-  @media only screen and (max-width: 768px) {
-    .slope {
-      width: 100.35%; } }
-  @media only screen and (max-width: 480px) {
-    .slope {
-      width: 100.85%; } }
 
 .services-background:before {
   content: "";
@@ -279,7 +266,16 @@ BACKGROUND
   border-right-width: 100vw;
   border-bottom-width: 11vw;
   border-style: solid;
-  border-color: transparent transparent #75c372; }
+  border-color: transparent transparent #0b4e70; }
+  @media only screen and (max-width: 1024px) {
+    .services-background:before {
+      bottom: 12.7vw; } }
+  @media only screen and (max-width: 768px) {
+    .services-background:before {
+      bottom: 13.2vw; } }
+  @media only screen and (max-width: 480px) {
+    .services-background:before {
+      bottom: 14.2vw; } }
 
 .services-background {
   margin-top: 300px;
@@ -293,10 +289,11 @@ BACKGROUND
       height: 280px; } }
   @media only screen and (max-width: 768px) {
     .services-background {
-      margin-top: 20px; } }
+      margin-top: 180px; } }
   @media only screen and (max-width: 480px) {
     .services-background {
-      height: 520px; } }
+      margin-top: 150px;
+      height: 510px; } }
 
 .footer {
   position: relative;
