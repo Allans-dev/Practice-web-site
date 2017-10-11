@@ -134,7 +134,12 @@ TITLE / SWIPER
     
     @include mobile-landscape-and-below {
         padding-top: 140px;
-        width: 370px;
+        width: 350px;
+    }
+    
+    @include mobile-portrait-and-below {
+        padding-top: 140px;
+        width: 300px;
     }
     
     h1 {
@@ -153,7 +158,11 @@ TITLE / SWIPER
         }
         
         @include mobile-landscape-and-below {
-            font-size: 240%;
+            font-size: 220%;
+        }
+        
+        @include mobile-portrait-and-below {
+            font-size: 200%;
         }
     }
     
@@ -307,9 +316,6 @@ BACKGROUND
         top: 260px;  
     }
     
-    @include mobile-portrait-and-below {
-        top: 230px;
-    }
 }
 
 .services-background:before {
