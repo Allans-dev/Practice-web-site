@@ -274,8 +274,20 @@ BACKGROUND
   border-top: 11vw solid transparent;
   border-left: 98vw solid #0b4e70;
   border-right: 0vw solid transparent;
-  border-bottom: 4vw solid #0b4e70; }
+  border-bottom: 4vw solid #0b4e70; 
+}
 
+@media only screen and (max-width: 720px) {
+  .services-background:before { 
+    border-left: 97vw solid #0b4e70;         
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .services-background:before { 
+    border-left: 96vw solid #0b4e70;         
+  }
+}
 .services-background {
   margin-top: 230px;
   position: relative;
