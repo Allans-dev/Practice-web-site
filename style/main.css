@@ -272,7 +272,7 @@ BACKGROUND
   bottom: 0;
   left: 0;
   border-top: 11vw solid transparent;
-  border-left: 100vw solid #0b4e70;
+  border-left: 98vw solid #0b4e70;
   border-right: 0vw solid transparent;
   border-bottom: 4vw solid #0b4e70; }
 
@@ -300,7 +300,7 @@ BACKGROUND
   background-color: #212934;
   height: 30px;
   width: 100%;
-  margin-bottom: 60px; }
+  }
   @media only screen and (max-width: 935px) {
     .footer {
       margin-bottom: 40px; } }
